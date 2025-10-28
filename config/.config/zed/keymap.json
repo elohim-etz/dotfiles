@@ -1,0 +1,15 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-b": "workspace::ToggleRightDock",
+      "ctrl-shift-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-v": "terminal::Paste"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[user]
+	email = 133593113+elohim-etz@users.noreply.github.com
+	name = Naveen
+	signingkey = 8E9DC216C40AE74C
+[core]
+	editor = nano
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true

@@ -1,0 +1,21 @@
+allow_images = true
+prompt = Search…
+show = drun
+insensitive = true
+lines = 10
+columns = 1
+width = 30%
+height = 50%
+no_actions = true
+image_size = 24
+location = center
+hide_scroll = true
+matching = fuzzy
+term = kitty
+always_parse_args = true
+allow_markup = true
+sort_order = alphabetical
+
+history = true
+history_file = ~/.local/share/wofi-history
+sort_order = default, recently-used
