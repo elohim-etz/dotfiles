@@ -2,7 +2,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Use single-line layout
-format = """$directory$git_branch$git_status $character """
+format = """$directory$git_branch$git_state$git_status $character """
 right_format = """$cmd_duration"""
 add_newline = false
 
@@ -17,6 +17,13 @@ vimcmd_symbol = "[󰄛 ❮](subtext1)"
 
 [git_branch]
 style = "bold mauve"
+
+[git_status]
+style = "bold text"
+
+[git_state]
+format = '([$state( $progress_current/$progress_total)]($style)) '
+style = "bold yellow"
 
 [directory]
 truncation_length = 4
