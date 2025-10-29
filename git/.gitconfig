@@ -8,3 +8,11 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
+
+[alias]
+    cs = cherry-pick --signoff
+    rh = reset --hard
+    rs = reset --soft
+    ca = commit --amend
+    co = checkout
+    rv-l = rev-list --left-right --count
