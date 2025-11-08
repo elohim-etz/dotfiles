@@ -1,19 +1,21 @@
+@import "mocha.css";
+
 @define-color bar-bg rgba(0, 0, 0, 0);
 
-@define-color main-bg #11111b;
-@define-color main-fg #e2cdf4;
+@define-color main-bg @mantle;
+@define-color main-fg @text;
 
-@define-color wb-act-bg #a6adc8;
-@define-color wb-act-fg #313244;
+@define-color wb-act-bg @lavender;
+@define-color wb-act-fg @surface0;
 
-@define-color wb-hvr-bg #f5c2e7;
-@define-color wb-hvr-fg #313244;
+@define-color wb-hvr-bg @flamingo;
+@define-color wb-hvr-fg @surface0;
 
 * {
     border: none;
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
+    font-weight: 600;
     font-size: 13px;
     min-height: 10px;
 }
