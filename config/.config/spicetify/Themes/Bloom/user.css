@@ -50,7 +50,6 @@
   --lyrics-color-background: rgb(0, 0, 0, 0) !important;
 }
 
-
 /* Fix Overflow off Screen */
 html {
   max-width: 100vw;
@@ -134,9 +133,11 @@ html {
 }
 
 .main-entityHeader-overlay {
-  background-image: linear-gradient(to bottom,
-      rgb(39 39 39 / 0%),
-      var(--spice-main));
+  background-image: linear-gradient(
+    to bottom,
+    rgb(39 39 39 / 0%),
+    var(--spice-main)
+  );
 }
 
 .x-actionBarBackground-background,
@@ -240,7 +241,7 @@ html {
   overflow: unset;
 }
 
-.x-searchResultsTracks-root>.main-gridContainer-gridContainer,
+.x-searchResultsTracks-root > .main-gridContainer-gridContainer,
 .main-trackList-trackList,
 .main-card-card,
 .main-heroCard-card,
@@ -309,13 +310,16 @@ html {
   backdrop-filter: blur(50px) saturate(2.5);
 }
 
-.global-nav .Root__top-container:not(:has(.main-topBar-container)) .Root__main-view::after {
+.global-nav
+  .Root__top-container:not(:has(.main-topBar-container))
+  .Root__main-view::after {
   content: none;
   visibility: none;
   backdrop-filter: none;
 }
 
-.Root__top-container:has(.lyrics-lyrics-container) .main-topBar-topbarContentWrapper {
+.Root__top-container:has(.lyrics-lyrics-container)
+  .main-topBar-topbarContentWrapper {
   display: none !important;
 }
 
@@ -324,12 +328,12 @@ html {
 }
 
 /* Top Bar Styles */
-.main-topBar-container>*,
+.main-topBar-container > *,
 .main-topBar-topbarContent {
   -webkit-app-region: drag !important;
 }
 
-.global-nav .main-topBar-container>*,
+.global-nav .main-topBar-container > *,
 .global-nav .main-topBar-topbarContent,
 .main-topBar-topbarContentRight button,
 .main-topBar-topbarContentRight *,
@@ -347,7 +351,12 @@ html {
   padding-inline-start: 80px !important;
 }
 
-.spotify__container--is-desktop.spotify__os--is-macos .global-nav .main-topBar-container .spotify__container--is-desktop.spotify__os--is-windows .global-nav .main-topBar-container,
+.spotify__container--is-desktop.spotify__os--is-macos
+  .global-nav
+  .main-topBar-container
+  .spotify__container--is-desktop.spotify__os--is-windows
+  .global-nav
+  .main-topBar-container,
 .global-nav .main-topBar-container {
   padding-inline: 0 !important;
 }
@@ -374,7 +383,9 @@ html {
   top: 40px !important;
 }
 
-.global-nav .artist-artistDiscography-tracklist .main-trackList-trackListHeader {
+.global-nav
+  .artist-artistDiscography-tracklist
+  .main-trackList-trackListHeader {
   top: 96px !important;
 }
 
@@ -412,8 +423,8 @@ html {
 }
 
 .main-topBar-background {
-  background-color: var(--spice-sidebar, #F3F3F3) !important;
-  background: var(--spice-sidebar, #F3F3F3) !important;
+  background-color: var(--spice-sidebar, #f3f3f3) !important;
+  background: var(--spice-sidebar, #f3f3f3) !important;
   backdrop-filter: none !important;
   opacity: 1 !important;
   border: none !important;
@@ -476,7 +487,7 @@ h3,
   align-items: center;
 }
 
-.main-topBar-historyButtons>button:nth-child(1) {
+.main-topBar-historyButtons > button:nth-child(1) {
   mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_arrow_left_24_filled.svg");
   -webkit-mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_arrow_left_24_filled.svg");
 
@@ -486,7 +497,7 @@ h3,
   height: 24px !important;
 }
 
-.main-topBar-historyButtons>button:nth-child(2) {
+.main-topBar-historyButtons > button:nth-child(2) {
   display: inline-flex !important;
   mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_arrow_right_24_filled.svg");
   mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_arrow_right_24_filled.svg");
@@ -503,8 +514,8 @@ h3,
 button.main-globalNav-navLink[aria-label="Home"],
 button[aria-label="What's New"],
 button[aria-label="Friend Activity"] {
-  background-color: var(--spice-sidebar, #F3F3F3) !important;
-  background: var(--spice-sidebar, #F3F3F3) !important;
+  background-color: var(--spice-sidebar, #f3f3f3) !important;
+  background: var(--spice-sidebar, #f3f3f3) !important;
   border: 1px solid var(--spice-light-border, #e0e0e0) !important;
   border-radius: 50% !important; /* circle */
   box-shadow: none !important;
@@ -534,9 +545,9 @@ button[aria-label="Friend Activity"] svg {
 }
 
 /* Inner containers if exist */
-button.main-globalNav-navLink[aria-label="Home"]>*,
-button[aria-label="What's New"]>*,
-button[aria-label="Friend Activity"]>* {
+button.main-globalNav-navLink[aria-label="Home"] > *,
+button[aria-label="What's New"] > *,
+button[aria-label="Friend Activity"] > * {
   background-color: transparent !important;
   margin: 0;
   padding: 0;
@@ -549,10 +560,12 @@ button[aria-label="Friend Activity"]>* {
 /* --- 4. Avatar container --- */
 /* Using a general selector for the button on the right that contains an img */
 .main-topBar-topbarContentRight button:has(img),
-button.main-userWidget-box[data-testid="user-widget-link"] /* Adding more specific selector */
-{
-  background-color: var(--spice-sidebar, #F3F3F3) !important; /* ** using var ** */
-  background: var(--spice-sidebar, #F3F3F3) !important;
+button.main-userWidget-box[data-testid="user-widget-link"] /* Adding more specific selector */ {
+  background-color: var(
+    --spice-sidebar,
+    #f3f3f3
+  ) !important; /* ** using var ** */
+  background: var(--spice-sidebar, #f3f3f3) !important;
   padding: 2px !important; /* padding for img */
   width: 32px !important;
   height: 32px !important;
@@ -569,8 +582,8 @@ button.main-userWidget-box[data-testid="user-widget-link"] /* Adding more specif
 }
 
 /* Inner elements and avatar - make transparent */
-.main-topBar-topbarContentRight button:has(img)>*,
-button.main-userWidget-box[data-testid="user-widget-link"]>*,
+.main-topBar-topbarContentRight button:has(img) > *,
+button.main-userWidget-box[data-testid="user-widget-link"] > *,
 .main-avatar-avatar {
   background-color: transparent !important;
   border-radius: 50% !important; /* ** ROUNDED CONTAINER/FIGURE ** */
@@ -602,15 +615,17 @@ button.main-userWidget-box[data-testid="user-widget-link"] img,
   display: none !important;
 }
 
-
 /* menus */
 
 /* --- 5. "Create" Button (Plus) - Adaptive Size --- */
 /* Using aria-label and classes to select the button */
 button.main-useDropTarget-base[aria-label="Create"],
 button.l5V7KOO1aHJ4R7jYTQuV[aria-label="Create"] {
-  background-color: var(--spice-sidebar, #F3F3F3) !important; /* ** Background F3F3F3 ** */
-  background: var(--spice-sidebar, #F3F3F3) !important;
+  background-color: var(
+    --spice-sidebar,
+    #f3f3f3
+  ) !important; /* ** Background F3F3F3 ** */
+  background: var(--spice-sidebar, #f3f3f3) !important;
   border: 1px solid var(--spice-light-border, #e0e0e0) !important; /* Thin border */
   color: var(--spice-text) !important; /* ** Dark color for text and icon ** */
   box-shadow: none !important;
@@ -653,7 +668,6 @@ button.l5V7KOO1aHJ4R7jYTQuV[aria-label="Create"] span {
 
 /* search */
 
-
 /* --- 2. Search Field (Restoring Working Input State) --- */
 /* Container Width */
 .main-topBar-searchBar {
@@ -678,7 +692,8 @@ form.e-9812-form-input-icon[role="search"] {
 }
 
 /* Leading icon container - Margins from edge */
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading {
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--leading {
   flex-shrink: 0;
   display: flex !important; /* Ensure flex is applied */
   align-items: center !important; /* Ensure vertical centering */
@@ -726,15 +741,67 @@ form.e-9812-form-input-icon[role="search"] input.e-9812-form-input {
 }
 
 /* Placeholder */
-form.e-9812-form-input-icon[role="search"] input.e-9812-form-input::placeholder { color: var(--spice-subtext, #888888) !important; opacity: 1 !important; }
+form.e-9812-form-input-icon[role="search"]
+  input.e-9812-form-input::placeholder {
+  color: var(--spice-subtext, #888888) !important;
+  opacity: 1 !important;
+}
 /* Focus */
-form.e-9812-form-input-icon[role="search"]:focus-within { border: 1px solid var(--spice-accent, #006bba) !important; box-shadow: 0 0 0 1px var(--spice-accent, #006bba) !important; }
+form.e-9812-form-input-icon[role="search"]:focus-within {
+  border: 1px solid var(--spice-accent, #006bba) !important;
+  box-shadow: 0 0 0 1px var(--spice-accent, #006bba) !important;
+}
 
 /* --- Other icon styles unchanged --- */
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading button.EJttP30F1zYHeAw7ISHb, form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading button.EJttP30F1zYHeAw7ISHb svg { display: none !important; position: absolute !important; width: 0 !important; height: 0 !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; overflow: hidden !important; margin: 0 !important; padding: 0 !important; border: 0 !important; left: -9999px; }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading svg.M9l40ptEBXPm03dU3X1k { display: block !important; width: 20px !important; height: 20px !important; box-sizing: border-box !important; opacity: 1 !important; visibility: visible !important; fill: var(--spice-subtext, #6d6d6d) !important; mask: none !important; -webkit-mask: none !important; clip-path: none !important; overflow: visible !important; padding: 0 !important; margin: 0 !important; }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading svg.M9l40ptEBXPm03dU3X1k path { fill: var(--spice-subtext, #6d6d6d) !important; mask: none !important; -webkit-mask: none !important; clip-path: none !important; stroke: none !important; }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--trailing {
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--leading
+  button.EJttP30F1zYHeAw7ISHb,
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--leading
+  button.EJttP30F1zYHeAw7ISHb
+  svg {
+  display: none !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  left: -9999px;
+}
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--leading
+  svg.M9l40ptEBXPm03dU3X1k {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  fill: var(--spice-subtext, #6d6d6d) !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  clip-path: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--leading
+  svg.M9l40ptEBXPm03dU3X1k
+  path {
+  fill: var(--spice-subtext, #6d6d6d) !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  clip-path: none !important;
+  stroke: none !important;
+}
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--trailing {
   position: absolute !important;
   right: 12px !important;
   top: 50% !important;
@@ -747,69 +814,97 @@ form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--traili
   margin: 0;
   padding: 0;
 }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--trailing button.MdMAXXFPalD99eigsBug {
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--trailing
+  button.MdMAXXFPalD99eigsBug {
   margin-right: 3px !important; /* ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹ 3px */
 }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--trailing div.BV0jjn_h5TtMMl8YKuZ0 {
-   margin-left: 8px !important; /* ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹ 3px */
- }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--trailing button { background-color: transparent !important; padding: 0 !important; border: none !important; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--trailing button svg { fill: var(--spice-subtext, #555555) !important; width: 16px !important; height: 16px !important; display: block; }
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--trailing
+  div.BV0jjn_h5TtMMl8YKuZ0 {
+  margin-left: 8px !important; /* ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹ 3px */
+}
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--trailing
+  button {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form.e-9812-form-input-icon[role="search"]
+  .e-9812-form-input-icon__icon--trailing
+  button
+  svg {
+  fill: var(--spice-subtext, #555555) !important;
+  width: 16px !important;
+  height: 16px !important;
+  display: block;
+}
 /*.dM_TEJo05MxBvrLzfNrW { display: none !important; }*/
 /* --- End of Section 2 --- */
 
 /* Fix Window Controls Overlap on Windows when narrow */
 
-
 .spotify__container--is-desktop.spotify__os--is-windows .main-topBar-container {
   padding-inline-end: max(10vw, 150px) !important;
 }
 
-
-.spotify__container--is-desktop.spotify__os--is-windows .Root__top-container--right-sidebar-visible .main-topBar-container {
-
+.spotify__container--is-desktop.spotify__os--is-windows
+  .Root__top-container--right-sidebar-visible
+  .main-topBar-container {
   padding-inline-end: max(167px, 180px) !important;
 }
 
-
 .main-topBar-topbarContentRight {
-    flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 /* Style Ctrl+K hint - Absolute Position using LEFT offset */
 
-
 .dM_TEJo05MxBvrLzfNrW {
-  position: absolute !important; 
-  left: 170px !important; 
+  position: absolute !important;
+  left: 170px !important;
   top: 50% !important;
-  transform: translateY(-50%) !important; 
-  z-index: 1 !important; 
+  transform: translateY(-50%) !important;
+  z-index: 1 !important;
   pointer-events: none !important;
-  display: none !important; 
+  display: none !important;
   align-items: center !important;
   opacity: 0.6 !important;
 }
 
-
-form.e-9812-form-input-icon[role="search"] input.e-9812-form-input:focus:placeholder-shown + .dM_TEJo05MxBvrLzfNrW {
+form.e-9812-form-input-icon[role="search"]
+  input.e-9812-form-input:focus:placeholder-shown
+  + .dM_TEJo05MxBvrLzfNrW {
   display: flex !important;
 }
 
-
 .dM_TEJo05MxBvrLzfNrW kbd.xlLQHgpip3xYOwRYpwun {
-  background-color: transparent !important; border: 1px solid var(--spice-subtext, #888888) !important; color: var(--spice-subtext, #888888) !important;
-  padding: 2px 4px !important; border-radius: 3px !important; font-size: 11px !important; margin-left: 4px !important; line-height: 1 !important;
+  background-color: transparent !important;
+  border: 1px solid var(--spice-subtext, #888888) !important;
+  color: var(--spice-subtext, #888888) !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  font-size: 11px !important;
+  margin-left: 4px !important;
+  line-height: 1 !important;
 }
 
-.dM_TEJo05MxBvrLzfNrW span.upGmCR5y3yDImbt6sHOl { display: none !important; }
+.dM_TEJo05MxBvrLzfNrW span.upGmCR5y3yDImbt6sHOl {
+  display: none !important;
+}
 /* Span wrapper */
-.dM_TEJo05MxBvrLzfNrW span.IYex0sXu8fnCz1FqFbRe { display: contents !important; }
+.dM_TEJo05MxBvrLzfNrW span.IYex0sXu8fnCz1FqFbRe {
+  display: contents !important;
+}
 
 form.e-9812-form-input-icon[role="search"] input.e-9812-form-input {
-
-    position: relative; 
-    z-index: 0 !important;
+  position: relative;
+  z-index: 0 !important;
 }
 
 /* Style Search Dropdown Background AND POSITION */
@@ -817,15 +912,14 @@ form.e-9812-form-input-icon[role="search"] input.e-9812-form-input {
 #recent-searches-dropdown {
   background-color: transparent !important;
   border: none !important;
-  position: absolute !important; 
+  position: absolute !important;
   left: 0 !important;
-  top: 100% !important; 
-  margin-top: 8px !important; 
-  width: 100% !important; 
-  z-index: 10; 
-  pointer-events: none; 
+  top: 100% !important;
+  margin-top: 8px !important;
+  width: 100% !important;
+  z-index: 10;
+  pointer-events: none;
 }
-
 
 .GimJ6fo6WOYPyWNVpSr1.ZjfaJlGQZ42nCWjD3FDm {
   background-color: var(--spice-card) !important;
@@ -833,12 +927,11 @@ form.e-9812-form-input-icon[role="search"] input.e-9812-form-input {
   border: 1px solid var(--spice-contour) !important;
   box-shadow: 0 4px 16px rgba(var(--spice-rgb-layer-shadow), 0.5) !important;
   width: 100% !important;
-  max-height: 400px; 
-  box-sizing: border-box; 
-  pointer-events: auto; 
- 
-  transform: none !important;
+  max-height: 400px;
+  box-sizing: border-box;
+  pointer-events: auto;
 
+  transform: none !important;
 }
 
 .x-searchInput-searchInputInput {
@@ -900,7 +993,6 @@ form.e-9812-form-input-icon[role="search"] input.e-9812-form-input {
 .x-searchInput-searchInputClearButton {
   color: var(--spice-text) !important;
 }
-
 
 .x-searchResultsTracks-root .main-gridContainer-gridContainer {
   padding: 8px;
@@ -1048,14 +1140,16 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   color: var(--spice-button);
 }
 
-.main-deletePlaylistDialog-buttonContainer> :last-child,
-.main-deleteFolderDialog-buttonContainer> :last-child {
+.main-deletePlaylistDialog-buttonContainer > :last-child,
+.main-deleteFolderDialog-buttonContainer > :last-child {
   background-color: var(--spice-notification-error);
 }
 
 /* friend activity */
 
-.spotify__container--is-desktop.spotify__os--is-windows .Root__top-container--right-sidebar-visible .main-topBar-container {
+.spotify__container--is-desktop.spotify__os--is-windows
+  .Root__top-container--right-sidebar-visible
+  .main-topBar-container {
   padding-inline-end: 167px;
 }
 
@@ -1148,7 +1242,7 @@ aside[aria-label="Friend Activity"] .main-avatar-avatar {
   background-color: var(--spice-card);
 }
 
-.x-settings-equalizerPresetsContainer>span>.main-dropDown-dropDown {
+.x-settings-equalizerPresetsContainer > span > .main-dropDown-dropDown {
   background-color: var(--spice-selected-row) !important;
 }
 
@@ -1177,11 +1271,11 @@ select {
   box-shadow: 0 0 0 1px var(--spice-subtext) !important;
 }
 
-input:hover:not([disabled], :active)~.x-toggle-indicatorWrapper {
+input:hover:not([disabled], :active) ~ .x-toggle-indicatorWrapper {
   background-color: var(--spice-selected-row);
 }
 
-input:checked~.x-toggle-indicatorWrapper {
+input:checked ~ .x-toggle-indicatorWrapper {
   background-color: var(--spice-button);
   box-shadow: none !important;
 }
@@ -1196,11 +1290,11 @@ input:checked~.x-toggle-indicatorWrapper {
   transition: transform 50ms ease;
 }
 
-input:not([disabled])~.x-toggle-indicatorWrapper:hover .x-toggle-indicator {
+input:not([disabled]) ~ .x-toggle-indicatorWrapper:hover .x-toggle-indicator {
   transform: scale(1.2);
 }
 
-input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
+input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
   background-color: var(--spice-main);
   right: 4px;
 }
@@ -1229,7 +1323,8 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
 
 /* connect device menu */
 
-.main-devicePicker-header>.main-devicePicker-nowPlayingActiveIcon[src*="equaliser"] {
+.main-devicePicker-header
+  > .main-devicePicker-nowPlayingActiveIcon[src*="equaliser"] {
   mask-image: var(--equalizer-svg);
   -webkit-mask-image: var(--equalizer-svg);
   background: var(--spice-button);
@@ -1257,7 +1352,8 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   color: var(--spice-rgb-subtext);
 }
 
-.hcuLp8V4uEEfWZ4k6aLV[aria-disabled="true"] .main-devicePicker-nowPlayingActiveIcon {
+.hcuLp8V4uEEfWZ4k6aLV[aria-disabled="true"]
+  .main-devicePicker-nowPlayingActiveIcon {
   fill: var(--spice-rgb-subtext);
 }
 
@@ -1359,7 +1455,7 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   padding-left: 6px;
 }
 
-.main-nowPlayingWidget-nowPlaying>.ellipsis-one-line,
+.main-nowPlayingWidget-nowPlaying > .ellipsis-one-line,
 .main-trackInfo-container {
   border-radius: var(--border-radius-1) !important;
 }
@@ -1449,8 +1545,13 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   border-radius: var(--border-radius-1) !important;
 }
 
-.main-coverSlotCollapsed-container[aria-hidden="true"] .cover-art .cover-art-image,
-.main-nowPlayingWidget-coverExpanded .main-coverSlotCollapsed-container .cover-art .cover-art-image {
+.main-coverSlotCollapsed-container[aria-hidden="true"]
+  .cover-art
+  .cover-art-image,
+.main-nowPlayingWidget-coverExpanded
+  .main-coverSlotCollapsed-container
+  .cover-art
+  .cover-art-image {
   width: 200px;
   height: 200px;
   border-radius: var(--border-radius-1) !important;
@@ -1488,7 +1589,9 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
 
 .main-skipBackButton-button:hover,
 .main-skipForwardButton-button:hover,
-.main-repeatButton-button[aria-checked="false"]:not([aria-label="Activer jukebox"]):hover,
+.main-repeatButton-button[aria-checked="false"]:not(
+    [aria-label="Activer jukebox"]
+  ):hover,
 .MRfNcNMd_djj3KOg_VOB:hover,
 .XGCdw_LcXQHrxmvpxjwi:hover {
   background-color: var(--spice-subtext) !important;
@@ -1536,13 +1639,12 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   background-color: var(--spice-text);
   mask-repeat: no-repeat !important;
   -webkit-mask-repeat: no-repeat !important;
-  mask-position: center center !important; 
+  mask-position: center center !important;
   -webkit-mask-position: center center !important;
-  mask-size: 80% !important; 
+  mask-size: 80% !important;
   -webkit-mask-size: 80% !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
-
 }
 
 .player-controls button[aria-label="Play"],
@@ -1552,13 +1654,12 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   background-color: var(--spice-text);
   mask-repeat: no-repeat !important;
   -webkit-mask-repeat: no-repeat !important;
-  mask-position: center center !important; 
+  mask-position: center center !important;
   -webkit-mask-position: center center !important;
-  mask-size: 80% !important; 
+  mask-size: 80% !important;
   -webkit-mask-size: 80% !important;
-  background-repeat: no-repeat !important; 
+  background-repeat: no-repeat !important;
   background-position: center center !important;
-
 }
 
 .player-controls__buttons {
@@ -1603,11 +1704,10 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   -webkit-mask-repeat: no-repeat !important;
   mask-position: center center !important;
   -webkit-mask-position: center center !important;
-  mask-size: 80% !important; 
+  mask-size: 80% !important;
   -webkit-mask-size: 80% !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
-
 }
 
 .player-controls__left button[aria-label="Previous"],
@@ -1621,11 +1721,10 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   -webkit-mask-repeat: no-repeat !important;
   mask-position: center center !important;
   -webkit-mask-position: center center !important;
-  mask-size: 80% !important; 
+  mask-size: 80% !important;
   -webkit-mask-size: 80% !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
-
 }
 
 .MRfNcNMd_djj3KOg_VOB {
@@ -1790,38 +1889,6 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   display: none !important;
 }
 
-/* play buttons */
-
-[dir="ltr"] .main-card-PlayButtonContainer {
-  filter: drop-shadow(0 0 5px rgba(0 0 0 / 30%));
-}
-
-.main-card-imageContainer>.main-card-PlayButtonContainer>.main-playButton-PlayButton>button {
-  background-color: white !important;
-}
-
-.main-playButton-button,
-.main-playButton-PlayButton>button,
-.main-trackList-rowPlayPauseButton {
-  background-color: var(--spice-text) !important;
-  mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_play_24_filled.svg");
-  -webkit-mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_play_24_filled.svg");
-}
-
-.main-playButton-PlayButton:focus,
-.main-playButton-PlayButton:hover {
-  background-color: transparent;
-}
-
-.main-playButton-PlayButton>button {
-  width: 40px;
-  height: 40px;
-}
-
-.main-playButton-PlayButton>button>span {
-  display: none;
-}
-
 /* error content */
 
 .main-pageErrorTemplate-errorBody {
@@ -1839,7 +1906,7 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   top: -60px !important;
 }
 
-#spicetify-show-list>* {
+#spicetify-show-list > * {
   padding: 0px;
 }
 
@@ -1847,7 +1914,8 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   padding-top: 8px;
 }
 
-.toggle-module__toggle-input___ceLM4_marketplace:checked~.toggle-module__toggle-indicator-wrapper___6Lcp0_marketplace {
+.toggle-module__toggle-input___ceLM4_marketplace:checked
+  ~ .toggle-module__toggle-indicator-wrapper___6Lcp0_marketplace {
   background-color: var(--spice-accent);
 }
 
@@ -1865,7 +1933,10 @@ button.arrow-btn {
 }
 
 /* eternal-jukebox */
-.main-view-container [class*="container"][class*="eternalDjukebox"]:not([class*="full-size"]):not([class*="empty"]) {
+.main-view-container
+  [class*="container"][class*="eternalDjukebox"]:not([class*="full-size"]):not(
+    [class*="empty"]
+  ) {
   padding-top: 8px;
 }
 
@@ -2060,7 +2131,11 @@ button.arrow-btn {
   padding-bottom: 40px;
 }
 
-#lyrics-fullscreen-container>.lyrics-lyricsContainer-LyricsContainer:has(.lyrics-lyricsContainer-UnsyncedLyricsPage) .lyrics-lyricsContainer-Provider {
+#lyrics-fullscreen-container
+  > .lyrics-lyricsContainer-LyricsContainer:has(
+    .lyrics-lyricsContainer-UnsyncedLyricsPage
+  )
+  .lyrics-lyricsContainer-Provider {
   padding-bottom: 35px;
 }
 
@@ -2080,14 +2155,33 @@ button.arrow-btn {
   bottom: 32px;
 }
 
-body:has(#lyrics-fullscreen-container)>#main>.Root>.Root__top-container>*:not(.Root__main-view),
-body:has(#lyrics-fullscreen-container)>#main>.Root>.Root__top-container>.Root__main-view>*:not(.main-view-container),
-body:has(#lyrics-fullscreen-container)>#main>.Root>.Root__top-container>.Root__main-view>.main-view-container>*:not(.under-main-view),
-body:has(#lyrics-fullscreen-container)>#main>.Root>.Root__top-container>.Root__main-view::before {
+body:has(#lyrics-fullscreen-container)
+  > #main
+  > .Root
+  > .Root__top-container
+  > *:not(.Root__main-view),
+body:has(#lyrics-fullscreen-container)
+  > #main
+  > .Root
+  > .Root__top-container
+  > .Root__main-view
+  > *:not(.main-view-container),
+body:has(#lyrics-fullscreen-container)
+  > #main
+  > .Root
+  > .Root__top-container
+  > .Root__main-view
+  > .main-view-container
+  > *:not(.under-main-view),
+body:has(#lyrics-fullscreen-container)
+  > #main
+  > .Root
+  > .Root__top-container
+  > .Root__main-view::before {
   display: none !important;
 }
 
-body:has(#lyrics-fullscreen-container)>#main>.Root {
+body:has(#lyrics-fullscreen-container) > #main > .Root {
   --panel-gap: 0 !important;
 }
 
@@ -2141,7 +2235,8 @@ body:has(#lyrics-fullscreen-container)>#main>.Root {
   padding-left: 14.5px;
 }
 
-.main-trackList-rowSectionVariable[aria-colindex="3"] .main-trackList-rowPlayCount {
+.main-trackList-rowSectionVariable[aria-colindex="3"]
+  .main-trackList-rowPlayCount {
   padding-left: 0px;
 }
 
@@ -2229,7 +2324,7 @@ body:has(#lyrics-fullscreen-container)>#main>.Root {
 
 /* Topbar */
 
-.main-topBar-container>*,
+.main-topBar-container > *,
 .main-topBar-topbarContent {
   -webkit-app-region: drag !important;
 }
@@ -2266,9 +2361,11 @@ body:has(#lyrics-fullscreen-container)>#main>.Root {
   margin-top: 0px;
 }
 
-.contentSpacing:not(.artist-artistDiscography-topBar,
-  .search-searchCategory-container,
-  .hV9v6y_uYwdAsoiOHpzk) {
+.contentSpacing:not(
+    .artist-artistDiscography-topBar,
+    .search-searchCategory-container,
+    .hV9v6y_uYwdAsoiOHpzk
+  ) {
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -2323,8 +2420,8 @@ body:has(#lyrics-fullscreen-container)>#main>.Root {
   justify-content: flex-start;
 }
 
-.main-yourLibraryX-navLinkActive.active>svg,
-.main-yourLibraryX-navLinkActive>.search-active-icon {
+.main-yourLibraryX-navLinkActive.active > svg,
+.main-yourLibraryX-navLinkActive > .search-active-icon {
   animation: bounce 175ms ease-out forwards;
 }
 
@@ -2365,17 +2462,19 @@ svg,
   display: none !important;
 }
 
-.main-yourLibraryX-collapseButton.main-yourLibraryX-collapseButtonIsCollapsed>.main-yourLibraryX-button {
+.main-yourLibraryX-collapseButton.main-yourLibraryX-collapseButtonIsCollapsed
+  > .main-yourLibraryX-button {
   color: var(--spice-subtext);
 }
 
-.main-yourLibraryX-collapseButton.main-yourLibraryX-collapseButtonIsCollapsed svg {
+.main-yourLibraryX-collapseButton.main-yourLibraryX-collapseButtonIsCollapsed
+  svg {
   mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_library_24_regular.svg");
   -webkit-mask-image: url("https://nimsandu.github.io/spicetify-bloom/assets/fluentui-system-icons/ic_fluent_library_24_regular.svg");
   background-color: var(--spice-subtext);
 }
 
-.main-yourLibraryX-collapseButton>.main-yourLibraryX-button {
+.main-yourLibraryX-collapseButton > .main-yourLibraryX-button {
   color: var(--spice-text);
 }
 
@@ -2392,9 +2491,18 @@ svg,
   background-color: var(--spice-text);
 }
 
-button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon { background: none !important; -webkit-mask-image: none !important; mask-image: none !important; fill: currentColor !important; display: block !important; width: 16px !important; height: 16px !important; }
-button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { display: block !important; }
-
+button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon {
+  background: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  fill: currentColor !important;
+  display: block !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path {
+  display: block !important;
+}
 
 .main-rootlist-wrapper {
   padding-left: unset;
@@ -2421,14 +2529,18 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
 /* Player bar */
 
 .main-nowPlayingBar-container {
+  /* keep everything else the same */
   justify-content: center;
   --background-highlight: rgba(var(--spice-rgb-sidebar), 0.5) !important;
   height: var(--now-playing-bar-height);
-  width: 100%;
+  width: calc(100% - 30px); /* adds horizontal space */
   position: absolute;
+  bottom: var(--margin-bottom-now-playing-bar);
+  left: 15px;
+  right: 15px;
+
   border-radius: var(--border-radius-now-playing-bar);
   padding: var(--padding-now-playing-bar);
-  bottom: var(--margin-bottom-now-playing-bar);
   border: var(--default-border-thickness) solid var(--shadow-rgb);
   background-color: rgba(var(--spice-rgb-main), 0.5);
   backdrop-filter: blur(var(--blur-radius)) saturate(0.5) brightness(100%);
@@ -2568,7 +2680,8 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
 .npv-track-metadata,
 .npv-up-next {
   min-width: 6rem;
-  border: 2px solid rgba(var(--spice-rgb-main), var(--bg-color-opacity-homeHeader));
+  border: 2px solid
+    rgba(var(--spice-rgb-main), var(--bg-color-opacity-homeHeader));
   padding: 0.5rem;
   border-radius: var(--card-border-radius);
   background-color: rgba(var(--spice-rgb-card), 0.75);
@@ -2600,7 +2713,7 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
 }
 
 .desktopmodals-aboutSpotifyModal-container {
-  background-color: rgba(var(--spice-rgb-main), .75);
+  background-color: rgba(var(--spice-rgb-main), 0.75);
   backdrop-filter: blur(4px) brightness(1.5);
 }
 
@@ -2611,7 +2724,8 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
 /* --- Responsive Search Bar --- */
 
 /* --- Breakpoint 1: Medium Screens --- */
-@media (max-width: 1000px) { /* Start shrinking around here */
+@media (max-width: 1000px) {
+  /* Start shrinking around here */
   .main-topBar-searchBar {
     flex-basis: 350px !important; /* Reduce base width */
     flex-shrink: 1 !important; /* Allow shrinking */
@@ -2620,17 +2734,18 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
 
   /* You can also reduce min-width of the input if needed */
   form.e-9812-form-input-icon[role="search"] input.e-9812-form-input {
-      min-width: 200px !important; /* Reduce minimum input width */
+    min-width: 200px !important; /* Reduce minimum input width */
   }
 }
 
 /* --- Breakpoint 2: Narrow Screens --- */
-@media (max-width: 750px) { /* Hide input field around here */
+@media (max-width: 750px) {
+  /* Hide input field around here */
 
   /* Search bar container becomes very small, like a button */
   .main-topBar-searchBar {
     flex: 0 0 auto !important; /* Remove flexibility, fixed size */
-    width: 36px !important;  /* Width = height for round button */
+    width: 36px !important; /* Width = height for round button */
     min-width: 36px !important;
     margin-left: 8px !important; /* Add small left margin */
   }
@@ -2647,13 +2762,13 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
     transition: background-color 150ms ease;
   }
   form.e-9812-form-input-icon[role="search"]:hover {
-      background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
+    background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
   }
-
 
   /* Hide text field, right icons, and Ctrl+K hint */
   form.e-9812-form-input-icon[role="search"] input.e-9812-form-input,
-  form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--trailing,
+  form.e-9812-form-input-icon[role="search"]
+    .e-9812-form-input-icon__icon--trailing,
   .dM_TEJo05MxBvrLzfNrW {
     display: none !important;
     visibility: hidden !important;
@@ -2662,7 +2777,8 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
   }
 
   /* Style remaining search icon */
-  form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading {
+  form.e-9812-form-input-icon[role="search"]
+    .e-9812-form-input-icon__icon--leading {
     margin: 0 !important; /* Remove margins */
     width: auto !important; /* Size by SVG */
     height: 100% !important; /* For vertical centering */
@@ -2670,10 +2786,12 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
     align-items: center !important;
     justify-content: center !important;
   }
-  form.e-9812-form-input-icon[role="search"] .e-9812-form-input-icon__icon--leading svg.M9l40ptEBXPm03dU3X1k {
-      width: 18px !important; /* Icon size */
-      height: 18px !important;
-      fill: var(--spice-text) !important; /* Icon color */
+  form.e-9812-form-input-icon[role="search"]
+    .e-9812-form-input-icon__icon--leading
+    svg.M9l40ptEBXPm03dU3X1k {
+    width: 18px !important; /* Icon size */
+    height: 18px !important;
+    fill: var(--spice-text) !important; /* Icon color */
   }
 }
 /* Align Top Bar Items Vertically - Manual Adjustment */
@@ -2690,9 +2808,9 @@ button.main-yourLibraryX-button[aria-label="Go back"] svg.e-9812-icon path { dis
 button.main-globalNav-navLink[aria-label="Home"],
 button[aria-label="What's New"],
 button[aria-label="Friend Activity"] {
-    position: relative; /* Enable relative positioning */
-    top: 2px; /* <<< Move down by (36-32)/2 pixels */
-    margin: 0 !important; /* Remove external margins */
+  position: relative; /* Enable relative positioning */
+  top: 2px; /* <<< Move down by (36-32)/2 pixels */
+  margin: 0 !important; /* Remove external margins */
 }
 
 /* --- Search field --- */
@@ -2702,7 +2820,7 @@ button[aria-label="Friend Activity"] {
   align-items: center;
 }
 form.e-9812-form-input-icon[role="search"] {
-    /* Height 36px */
+  /* Height 36px */
 }
 
 /* --- Right button container --- */
@@ -2717,9 +2835,8 @@ form.e-9812-form-input-icon[role="search"] {
 button.main-userWidget-box[data-testid="user-widget-link"],
 /* Add other selectors for right buttons if they are also 32px */
 .main-topBar-topbarContentRight button[aria-label*="Inbox"],
-.main-topBar-topbarContentRight button[aria-label*="Notifications"]
-{
-    position: relative; /* Enable relative positioning */
-    top: 2px; /* <<< Move down by (36-32)/2 pixels */
-    margin: 0 !important; /* Remove external margins */
+.main-topBar-topbarContentRight button[aria-label*="Notifications"] {
+  position: relative; /* Enable relative positioning */
+  top: 2px; /* <<< Move down by (36-32)/2 pixels */
+  margin: 0 !important; /* Remove external margins */
 }
