@@ -3,14 +3,19 @@
 	name = Naveen
 	signingkey = 8E9DC216C40AE74C
 [core]
-	editor = nano
+	editor = nvim
 [commit]
 	gpgsign = true
 [tag]
 	gpgSign = true
 
 [alias]
+    rb = rebase
+    psf = push --force-with-lease
+    mff = merge --ff-only
     cs = cherry-pick --signoff
+    cc = cherry-pick --continue
+    cp = cherry-pick
     rh = reset --hard
     rs = reset --soft
     ca = commit --amend
