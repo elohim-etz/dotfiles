@@ -1,18 +1,4 @@
 {
-    "label": "lock",
-    "action": "lockscreen.sh",
-    "text": "Lock",
-    "keybind": "l"
-}
-
-{
-    "label": "logout",
-    "action": "hyde-shell logout",
-    "text": "Logout",
-    "keybind": "e"
-}
-
-{
     "label": "suspend",
     "action": "hyprlock & disown && systemctl suspend",
     "text": "Suspend",
@@ -27,15 +13,29 @@
 }
 
 {
-    "label": "hibernate",
-    "action": "systemctl hibernate",
-    "text": "Hibernate",
-    "keybind": "h"
-}
-
-{
     "label": "reboot",
     "action": "systemctl reboot",
     "text": "Reboot",
     "keybind": "r"
+}
+
+{
+    "label": "lock",
+    "action": "lockscreen.sh",
+    "text": "Lock",
+    "keybind": "l"
+}
+
+{
+    "label": "logout",
+    "action": "systemctl --user exit",
+    "text": "Logout",
+    "keybind": "e"
+}
+
+{
+    "label": "hibernate",
+    "action": "systemctl hibernate",
+    "text": "Hibernate",
+    "keybind": "h"
 }
