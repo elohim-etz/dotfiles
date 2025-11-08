@@ -1,4 +1,7 @@
 {
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": ".SystemUIFont",
+  "lsp_document_colors": "inlay",
   "tabs": {
     "git_status": true
   },
