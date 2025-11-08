@@ -54,7 +54,6 @@ zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
 zinit light agkozak/zsh-z  # for directory jumping
 
-# Optional: Lazy load commands
 zinit ice wait lucid
 zinit light junegunn/fzf-bin
 
