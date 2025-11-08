@@ -1,12 +1,10 @@
 #!/bin/bash
-# brightnesscontrol.sh — Adjust screen brightness and show notification
+# brightnesscontrol.sh — Elegant brightness control for Hyprland
+# Dependencies: brightnessctl, notify-send (libnotify)
 
-# Usage:
-#   brightnesscontrol.sh up
-#   brightnesscontrol.sh down
+STEP="5%"
 
-STEP="1%"
-
+# Adjust brightness
 case "$1" in
   up)
     brightnessctl set +$STEP -q
@@ -20,22 +18,30 @@ case "$1" in
     ;;
 esac
 
-# Get brightness percentage
-br=$(brightnessctl get)
+# Get current and max brightness
+current=$(brightnessctl get)
 max=$(brightnessctl max)
-percent=$((br * 100 / max))
+percent=$((current * 100 / max))
 
-# Choose icon
-if (( percent > 80 )); then
+# Choose icon based on brightness level
+if (( percent >= 90 )); then
   icon="🌕"
-elif (( percent > 40 )); then
+elif (( percent >= 70 )); then
+  icon="🌖"
+elif (( percent >= 50 )); then
   icon="🌔"
-elif (( percent > 10 )); then
+elif (( percent >= 30 )); then
   icon="🌓"
-else
+elif (( percent >= 10 )); then
   icon="🌒"
+else
+  icon="🌑"
 fi
 
-# Send notification
-notify-send -u low -t 800 -h string:x-canonical-private-synchronous:brightness \
-  "Brightness $icon" "${percent}%"
+# Create progress bar (10 segments)
+progress=$(printf "%0.s█" $(seq 1 $((percent / 10))))
+empty=$(printf "%0.s░" $(seq 1 $((10 - percent / 10))))
+
+# Send notification (replace old one)
+notify-send -u low -t 900 -h string:x-canonical-private-synchronous:brightness \
+  "Brightness ${percent}%" "$icon  ${progress}${empty}"
