@@ -8,7 +8,7 @@
   "width": 1920,
 
   "modules-left": [
-    "custom/l_end",
+    "custom/sl_end",
     "cpu",
     "temperature",
     "memory",
@@ -47,7 +47,7 @@
     "power-profiles-daemon",
     "battery",
     "custom/power",
-    "custom/r_end"
+    "custom/sr_end"
   ],
 
   "cpu": {
@@ -257,9 +257,9 @@
   },
 
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%R \udb80\udced %d\u00b7%m\u00b7%y}",
     "rotate": 0,
-    "format-alt": "{:%R \udb80\udced %d\u00b7%m\u00b7%y}",
+    "format-alt": "{:%I:%M %p}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
