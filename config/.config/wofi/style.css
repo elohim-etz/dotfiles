@@ -9,7 +9,7 @@
 /* Global */
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Window */
@@ -45,7 +45,7 @@ window {
   margin: 5px 20px;
   padding: 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   color: @text;
   background-color: @surface0;
 }
@@ -54,7 +54,7 @@ window {
 #entry {
   background-color: @base;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 #entry:selected {
