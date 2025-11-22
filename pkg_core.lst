@@ -23,6 +23,7 @@ noto-fonts-emoji
 fzf
 unzip
 less
+zoxide
 
 zed
 neovim
@@ -48,3 +49,7 @@ xdg-desktop-portal-gtk
 tela-circle-icon-theme-dracula
 
 stow
+spotify-launcher
+
+bat
+fastfetch
