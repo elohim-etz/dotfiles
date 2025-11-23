@@ -54,12 +54,12 @@ sudo systemctl enable --now NetworkManager.service
 sudo systemctl enable --now systemd-resolved.service
 
 # -------- Spicetify Setup ---------
-msg "Applying Spicetify configuration..."
-spicetify backup apply
-spicetify config extensions adblock.js
-spicetify config current_theme Default
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
-spicetify apply
+# msg "Applying Spicetify configuration..."
+# spicetify backup apply
+# spicetify config extensions adblock.js
+# spicetify config current_theme Default
+# spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
+# spicetify apply
 
 # -------- Icon Theme Installation ---------
 msg "Installing Tela icon theme..."
