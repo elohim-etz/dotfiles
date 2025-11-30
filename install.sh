@@ -29,7 +29,7 @@ mkdir -p "$HOME/Pictures"
 # -------- Stow Dotfiles ---------
 msg "Stowing dotfiles..."
 
-for dir in .config zsh wallpapers extras; do
+for dir in .config zsh extras; do
     if [[ -d "$dir" ]]; then
         msg "→ Stowing $dir"
         stow -R "$dir"
