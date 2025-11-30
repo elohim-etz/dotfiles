@@ -9,7 +9,7 @@ satty
 kitty
 zsh
 starship
-thunar
+nemo
 grim
 slurp
 wl-clipboard
@@ -27,6 +27,7 @@ zoxide
 
 zed
 neovim
+code
 
 brightnessctl
 pavucontrol
