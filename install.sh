@@ -36,17 +36,6 @@ for dir in .config zsh extras; do
     fi
 done
 
-# -------- Run Grub and sddm Theme Scripts ---------
-msg "Running grub-theme.sh and sddm-theme.sh..."
-bash scripts/grub-theme.sh
-bash scripts/sddm-theme.sh
-
-# -------- Change Default Shell to ZSH ---------
-if [[ "$SHELL" != "$(command -v zsh)" ]]; then
-    msg "Changing default shell to zsh..."
-    chsh -s "$(command -v zsh)" || err "Failed to change shell"
-fi
-
 # -------- Enable System Services ---------
 msg "Enabling services..."
 sudo systemctl enable --now bluetooth.service
@@ -87,5 +76,16 @@ $GSET icon-theme "$ICON_THEME"
 $GSET cursor-theme "$CURSOR_THEME"
 $GSET font-name "$FONT_NAME"
 $GSET color-scheme "$COLOR_SCHEME"
+
+# -------- Change Default Shell to ZSH ---------
+if [[ "$SHELL" != "$(command -v zsh)" ]]; then
+    msg "Changing default shell to zsh..."
+    chsh -s "$(command -v zsh)" || err "Failed to change shell"
+fi
+
+# -------- Run Grub and sddm Theme Scripts ---------
+msg "Running grub-theme.sh and sddm-theme.sh..."
+bash scripts/grub-theme.sh
+bash scripts/sddm-theme.sh
 
 msg "All done!"
