@@ -7,7 +7,7 @@ err() { echo -e "[1;91m[!] $1[0m"; exit 1; }
 if ! command -v paru &>/dev/null; then
     msg "paru not found. Installing..."
     sudo pacman -Sy --needed --noconfirm base-devel git || err "Failed to install base-devel"
-    git clone https://aur.archlinux.org/paru.git /tmp/paru
+    git clone https://aur.archlinux.org/paru-bin.git /tmp/paru
     cd /tmp/paru
     makepkg -si --noconfirm || err "Failed to install paru"
     cd -
