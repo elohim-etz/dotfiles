@@ -105,12 +105,9 @@ alias du='du -h'
 alias clr='clear'
 alias svim='sudo nvim'
 
-alias cat='bat --style=plain --paging=never 2>/dev/null || cat'
-
 # Package managers
 alias update='sudo pacman -Syu --noconfirm'
 alias yayu='yay -Syu --noconfirm'
-
 
 # ======================================================================
 #   FZF Integration
