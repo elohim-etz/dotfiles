@@ -14,7 +14,7 @@
     "memory",
     "custom/r_end",
     "custom/l_end",
-    "hyprland/workspaces",
+    "niri/workspaces",
     "custom/r_end",
     "custom/l_end",
     "clock",
@@ -134,7 +134,7 @@
     "on-click-right": "fullscreen",
     "on-click-middle": "close",
     "class": "no-margin-padding",
-    "icon-size": 20,
+    "icon-size": 18,
     "ignore-list": ["kitty"],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition",
@@ -168,8 +168,23 @@
     }
   },
 
+"niri/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		// Named workspaces
+		// (you need to configure them in niri)
+		"browser": "",
+		"discord": "",
+		"chat": "<b></b>",
+
+		// Icons by state
+      "default": "",
+      "active": ""
+	}
+},
+
   "tray": {
-    "icon-size": 20,
+    "icon-size": 18,
     "rotate": 0,
     "spacing": 5,
     "icon-size-multiplier": 1.9
@@ -226,7 +241,7 @@
     "format": "{format_source}",
     "rotate": 0,
     "format-source": "\uf130",
-    "format-source-muted": "",
+    "format-source-muted": "  ",
     "on-click": "pavucontrol -t 4",
     "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
     "scroll-step": 5

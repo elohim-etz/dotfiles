@@ -40,8 +40,6 @@ tooltip {
   margin-top: 4px;
   margin-bottom: 4px;
   margin-left: 0px;
-  padding-left: 4px;
-  padding-right: 4px;
   margin-right: 0px;
   color: #eab2c2;
   animation: ws_normal 20s ease-in-out 1;
@@ -132,10 +130,10 @@ tooltip {
 #memory,
 #mpris,
 #network,
+#workspaces,
 #custom-power,
 #pulseaudio,
 #custom-spotify,
-#taskbar,
 #custom-theme,
 #tray,
 #custom-updates,
@@ -143,7 +141,6 @@ tooltip {
 #custom-wbar,
 #window,
 #temperature,
-#workspaces,
 #custom-notification,
 #power-profiles-daemon,
 #custom-l_end,
@@ -156,7 +153,15 @@ tooltip {
   background: @main-bg;
   opacity: 1;
   margin: 2px 0px 2px 0px;
-  padding: 0px 5px;
+  padding: 0px 2px;
+}
+
+#taskbar {
+  color: @main-fg;
+  background: @main-bg;
+  opacity: 1;
+  margin: 2px 0px 2px 0px;
+  padding: 0 0px;
 }
 
 #custom-weather {
@@ -226,10 +231,10 @@ tooltip {
   padding-right: 14px;
 }
 
-#workspaces,
+/*#workspaces,
 #taskbar {
   padding: 0px;
-}
+}*/
 
 #custom-r_end {
   border-radius: 0px 5px 5px 0px;
