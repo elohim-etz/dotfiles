@@ -1,5 +1,4 @@
 {
-  "workbench.colorTheme": "Catppuccin Mocha",
   "window.menuBarVisibility": "toggle",
   "editor.fontSize": 16,
   "editor.scrollbar.vertical": "hidden",
@@ -18,10 +17,11 @@
   "workbench.activityBar.location": "top",
   "window.customTitleBarVisibility": "auto",
   "workbench.sideBar.location": "right",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "explorer.compactFolders": false,
   "editor.wordWrap": "on",
   "editor.minimap.maxColumn": 60,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "workbench.colorTheme": "Catppuccin Macchiato"
 }
