@@ -1,1 +1,7 @@
 config/.config/Thunar/accels.scm
+
+config/.config/Code - OSS/*
+!config/.config/Code - OSS/User/
+config/.config/Code - OSS/User/*
+!config/.config/Code - OSS/User/settings.json
+!config/.config/Code - OSS/User/keybindings.json
