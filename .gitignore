@@ -5,3 +5,5 @@ config/.config/Code - OSS/*
 config/.config/Code - OSS/User/*
 !config/.config/Code - OSS/User/settings.json
 !config/.config/Code - OSS/User/keybindings.json
+config/.config/gtk-3.0/bookmarks
+config/.config/nvim/lazy-lock.json
