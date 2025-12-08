@@ -29,7 +29,7 @@ mkdir -p "$HOME/Pictures"
 # -------- Stow Dotfiles ---------
 msg "Stowing dotfiles..."
 
-for dir in .config zsh extras; do
+for dir in config local git zsh; do
     if [[ -d "$dir" ]]; then
         msg "→ Stowing $dir"
         stow -R "$dir"
@@ -82,10 +82,5 @@ if [[ "$SHELL" != "$(command -v zsh)" ]]; then
     msg "Changing default shell to zsh..."
     chsh -s "$(command -v zsh)" || err "Failed to change shell"
 fi
-
-# -------- Run Grub and sddm Theme Scripts ---------
-msg "Running grub-theme.sh and sddm-theme.sh..."
-bash scripts/grub-theme.sh
-bash scripts/sddm-theme.sh
 
 msg "All done!"
