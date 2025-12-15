@@ -6,68 +6,55 @@
 @define-color mauve     #cba6f7;
 @define-color red       #f38ba8;
 
-/* Global */
 * {
-  font-family: "JetBrainsMono Nerd Font", monospace;
-  font-size: 18px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 18px;
+    border: none;
 }
 
-/* Window */
-window {
-  margin: 0;
-  padding: 10px;
-  border: 2px solid @lavender;
-  border-radius: 8px;
-  background-color: @base;
+#window {
+    background-color: transparent;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+#outer-box {
+    background-color: @base;
+    border: 2px solid @mauve;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 15px;
 }
 
-/* Layout Containers */
-#outer-box,
-#inner-box,
-#scroll {
-  background-color: @base;
-  border: none;
-  margin: 5px;
-  padding: 10px;
-}
-
-/* Input */
 #input {
-  margin: 5px 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  color: @text;
-  background-color: @surface0;
+    background-color: @surface0;
+    color: #c0caf5;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
 }
 
-/* Entries */
+#input:focus {
+    box-shadow: 0 0 0 2px @mauve;
+}
+
+#scroll {
+    margin-top: 5px;
+}
+
 #entry {
-  background-color: @base;
-  border: none;
-  border-radius: 8px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    color: #c0caf5;
+    background-color: transparent;
 }
 
 #entry:selected {
-  border: 2px solid @lavender;
-  background-color: @surface1;
+    background-color: #7aa2f7;
 }
 
-#entry:selected #text {
-  color: @mauve;
+#text:selected {
+    color: #1a1b26;
 }
 
-/* Text */
 #text {
-  margin: 4px;
-  color: @text;
+    padding: 0px 5px;
 }
