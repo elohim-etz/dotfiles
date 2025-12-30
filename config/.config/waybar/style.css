@@ -78,21 +78,23 @@ tooltip label {
   color: #7ebae4;
 }
 
-#mode,
 #clock,
 #memory,
 #temperature,
 #cpu,
-#mpd,
-#custom-wall,
 #backlight,
 #pulseaudio,
 #network,
-#battery,
-#tray,
-#custom-cava-internal {
+#power-profiles-daemon,
+#tray {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+#battery {
+  padding-left: 6px;
+  padding-right: 16px;
+  color: #f5e0dc;
 }
 
 #memory {
@@ -105,10 +107,6 @@ tooltip label {
 
 #clock {
   color: rgb(217, 224, 238);
-}
-
-#custom-wall {
-  color: #33ccff;
 }
 
 #temperature {
@@ -124,17 +122,11 @@ tooltip label {
 }
 
 #network {
-  color: #ABE9B3;
+  color: #abe9b3;
 }
 
 #network.disconnected {
   color: rgb(255, 255, 255);
-}
-
-#custom-powermenu {
-  color: rgb(242, 143, 173);
-  padding-right: 20px;
-  padding-left: 10px;
 }
 
 #mpd.paused {
@@ -148,9 +140,4 @@ tooltip label {
 
 #mpd {
   color: #c0caf5;
-}
-
-#custom-cava-internal {
-  font-family: "Hack Nerd Font";
-  color: #33ccff;
 }

@@ -2,21 +2,20 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["custom/launcher", "memory", "temperature", "cpu"],
+  "modules-left": [
+    "custom/launcher",
+    "memory",
+    "temperature",
+    "cpu",
+    "power-profiles-daemon"
+  ],
 
   "modules-center": ["clock", "mpris"],
 
-  "modules-right": [
-    "network",
-    "pulseaudio",
-    "backlight",
-    "tray",
-    "power-profiles-daemon",
-    "custom/powermenu"
-  ],
+  "modules-right": ["network", "pulseaudio", "backlight", "tray", "battery"],
 
   "custom/launcher": {
-    "format": " ",
+    "format": " ",
     "on-click": "pkill wofi || wofi --show drun",
     "tooltip": false
   },
@@ -164,15 +163,24 @@
     "interval": 2
   },
 
-  "custom/powermenu": {
-    "format": "",
-    "on-click": "pkill rofi || ~/.config/rofi/powermenu/type-3/powermenu.sh",
-    "tooltip": false
-  },
-
   "tray": {
     "icon-size": 19,
     "spacing": 5
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      // "warning": 30,
+      // "critical": 20
+    },
+    "on-click-right": "wlogout --buttons-per-row 2",
+    "format": "{icon} {capacity}%",
+    "rotate": 0,
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
   "power-profiles-daemon": {
