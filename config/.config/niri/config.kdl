@@ -62,6 +62,7 @@ overview {
 
 // AUTOSTART
 spawn-at-startup "waybar"
+spawn-at-startup "mako"
 spawn-sh-at-startup "swww-daemon"
 
 hotkey-overlay {
@@ -146,7 +147,7 @@ binds {
     F12 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     F11 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-    Mod+O repeat=false { toggle-overview; }
+    Mod+Return repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
@@ -193,7 +194,7 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
+    Mod+M              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
