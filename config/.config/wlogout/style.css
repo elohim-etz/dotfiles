@@ -8,8 +8,8 @@ window {
 }
 
 button {
-  border-radius: 50;
-  margin: 10px;
+  border-radius: 25;
+  margin: 5px;
   border-color: #cba6f7;
   text-decoration-color: #cdd6f4;
   color: #cdd6f4;
@@ -24,13 +24,8 @@ button {
 button:focus,
 button:active,
 button:hover {
-  /* 20% Overlay 2, 80% mantle */
   background-color: rgb(48, 50, 66);
   outline-style: none;
-}
-
-#lock {
-  background-image: url("./icons/lock.svg");
 }
 
 #logout {
@@ -39,10 +34,6 @@ button:hover {
 
 #suspend {
   background-image: url("./icons/suspend.svg");
-}
-
-#hibernate {
-  background-image: url("./icons/hibernate.svg");
 }
 
 #shutdown {
