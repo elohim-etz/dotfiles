@@ -40,27 +40,33 @@ window > box {
 #workspaces {
   padding-left: 0px;
   padding-right: 4px;
+  margin: 0;
 }
 
 #workspaces button {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 0px;
+  margin: 2px 4px;
+  min-height: 24px;
+  min-width: 24px;
+  border: none;
+  border-radius: 35%;
+  background-color: #45475a;
+  color: #cdd6f4;
 }
 
 #workspaces button.active {
-  background-color: rgb(181, 232, 224);
-  color: rgb(26, 24, 38);
+  background-color: #cba6f7;
+  color: #1e1e2e;
 }
 
 #workspaces button.urgent {
-  color: rgb(26, 24, 38);
+  background-color: #f38ba8;
+  color: #1e1e2e;
 }
 
 #workspaces button:hover {
-  background-color: rgb(248, 189, 150);
-  color: rgb(26, 24, 38);
+  background-color: #f5c2e7;
+  color: #1e1e2e;
 }
 
 tooltip {
@@ -86,6 +92,8 @@ tooltip label {
 #pulseaudio,
 #network,
 #power-profiles-daemon,
+#workspaces,
+#mpris,
 #tray {
   padding-left: 10px;
   padding-right: 10px;
@@ -95,6 +103,10 @@ tooltip label {
   padding-left: 6px;
   padding-right: 16px;
   color: #f5e0dc;
+}
+
+#mpris {
+  color: rgb(166, 227, 161);
 }
 
 #memory {
@@ -114,7 +126,7 @@ tooltip label {
 }
 
 #backlight {
-  color: rgb(248, 189, 150);
+  color: rgb(245, 194, 231)
 }
 
 #pulseaudio {
@@ -127,17 +139,4 @@ tooltip label {
 
 #network.disconnected {
   color: rgb(255, 255, 255);
-}
-
-#mpd.paused {
-  color: #414868;
-  font-style: italic;
-}
-
-#mpd.stopped {
-  background: transparent;
-}
-
-#mpd {
-  color: #c0caf5;
 }

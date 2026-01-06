@@ -7,7 +7,8 @@
     "memory",
     "temperature",
     "cpu",
-    "power-profiles-daemon"
+    "power-profiles-daemon",
+    "niri/workspaces"
   ],
 
   "modules-center": ["clock", "mpris"],
@@ -18,6 +19,13 @@
     "format": " ",
     "on-click": "pkill wofi || wofi --show drun",
     "tooltip": false
+  },
+
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "●"
+    }
   },
 
   "pulseaudio": {
@@ -152,7 +160,7 @@
 
   "network": {
     "tooltip": true,
-    "format-wifi": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+    "format-wifi": "<span foreground='#f5c2e7'> {bandwidthDownBytes}</span> <span foreground='#94e2d5'> {bandwidthUpBytes}</span>",
     "rotate": 0,
     "format-ethernet": "󰈀 ",
     "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
@@ -170,9 +178,9 @@
 
   "battery": {
     "states": {
-      // "good": 95,
-      // "warning": 30,
-      // "critical": 20
+       "good": 95,
+       "warning": 30,
+       "critical": 20
     },
     "on-click-right": "wlogout --buttons-per-row 2",
     "format": "{icon} {capacity}%",
